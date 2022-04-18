@@ -1,0 +1,30 @@
+function sem_in=func(t,vi,f,tip_semnal)
+
+T=1./f;
+w=2.*pi.*f;
+
+switch tip_semnal  %forma de unda la intrare 
+
+    case 1
+        sem_in=vi.*sin(w.*t);
+    case 2
+        sem_in=vi.*cos(w.*t);
+    case 3
+        sem_in=vi.*sawtooth(w.*t);
+    case 4
+        sem_in=vi.*square(w*t);
+    case 5
+        sem_in=(2.*vi./pi)*asin(sin(w.*t));
+    case 6
+        sem_in=vi*sin(w*t)./(w*t);
+    case 7
+        sem_in=vi*(sin(w*t)).^2;
+    case 8
+        sem_in=vi/2+vi/2*sawtooth(w*t);
+    case 9
+        sem_in=vi/2+vi/2*square(w*t);
+
+end
+sem_in;
+
+end

@@ -1,0 +1,5 @@
+function fa=coef_Fa(t,f,vi,k,tip)
+T=1./f;
+w=2.*pi.*f;
+g=func(t,f,vi,tip_semnal);
+fa=g.*cos(k.*w.*t);
